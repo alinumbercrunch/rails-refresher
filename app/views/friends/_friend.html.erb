@@ -1,0 +1,18 @@
+<!-- Jumbotron -->
+<div class="p-4 shadow-4 rounded-3 mb-2" style="background-color: hsl(0, 0%, 94%);">
+  <h2> <%= friend.first_name %> <%= friend.last_name %></h2>
+  <p>
+  <%= friend.email %> |
+  <%= friend.phone %> |
+  <%= friend.twitter %>
+  <br/>
+  </p>
+  <div class="d-flex justify-content-start">
+  <%= link_to "Edit", edit_friend_path(@friend), class:"btn btn-dark m-1" %>
+  <%= link_to "Back", friends_path, class:"btn btn-dark m-1" %>
+
+  <%= button_to "Destroy", @friend, method: :delete, class:"btn btn-dark m-1" %>
+</div>
+
+</div>
+<!-- Jumbotron -->
