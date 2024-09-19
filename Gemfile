@@ -70,3 +70,6 @@ end
 
 # postgresql
 gem 'pg'
+
+# Devise
+gem 'devise', '~> 4.9', '>= 4.9.4'
