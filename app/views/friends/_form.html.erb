@@ -12,33 +12,42 @@
   <% end %>
 
   <div>
-    <%= form.label :first_name, style: "display: block", class:"form-label" %>
-    <%= form.text_field :first_name, class:"form-select" %>
+    <% form.label :first_name, style: "display: block", class:"form-label" %>
+    <%= form.text_field :first_name, class:"form-select", placeholder:"first_name" %>
+  </div>
+  <br>
+  <div>
+    <% form.label :last_name, style: "display: block", class:"form-label" %>
+    <%= form.text_field :last_name, class:"form-select", placeholder:"last_name" %>
   </div>
 
-  <div>
-    <%= form.label :last_name, style: "display: block", class:"form-label" %>
-    <%= form.text_field :last_name, class:"form-select" %>
-  </div>
+  <br>
 
   <div>
-    <%= form.label :email, style: "display: block", class:"form-label" %>
-    <%= form.text_field :email, class:"form-select" %>
+    <% form.label :email, style: "display: block", class:"form-label" %>
+    <%= form.text_field :email, class:"form-select", placeholder:"email" %>
   </div>
-
+  <br>
   <div>
-    <%= form.label :phone, style: "display: block", class:"form-label" %>
-    <%= form.text_field :phone, class:"form-select" %>
+    <% form.label :phone, style: "display: block", class:"form-label" %>
+    <%= form.text_field :phone, class:"form-select", placeholder:"phone" %>
   </div>
-
+  <br>
   <div>
-    <%= form.label :twitter, style: "display: block", class:"form-label" %>
-    <%= form.text_field :twitter, class:"form-select" %>
+    <% form.label :twitter, style: "display: block", class:"form-label" %>
+    <%= form.text_field :twitter, class:"form-select", placeholder:"twitter" %>
+  </div>
+  <br>
+   <div>
+    <% form.label :user_id, style: "display: block", class:"form-label" %>
+    <%= form.number_field :user_id, id: :friend_user_id, class:"form-control", value: current_user.id, type: :hidden %>
+
   </div>
 
   <div>
     <%= form.submit class:"btn btn-dark m-1" %>
-    <%= link_to "Back to friends", friends_path, class:"btn btn-dark m-1" %>
+    <%= link_to "back to friends", friends_path, class:"btn btn-dark m-1" %>
+
 
   </div>
 <% end %>
